@@ -60,7 +60,7 @@
                 }
             }
             .burgar-icon{
-                transition: transform 0.5;
+                transition: 0.5;
                 @media (min-width: 375px) {
                     display:none;
                 }
@@ -132,8 +132,68 @@
         padding: 20px;
         width: 450px;
         @include breakpoint(mobile) {
-            font-size: 38px;
-            width: 310px;
+            font-size: 36px;
+            width: 300px;
+        }
+    }
+}
+
+.interactive {
+    padding-top: 160px;
+    padding-bottom: 160px;
+    @include breakpoint(mobile) {                
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        @include breakpoint(mobile) {                
+            display: flex;
+            flex-direction: column;
+        }
+        .interactive-img {
+            @include breakpoint(mobile) {                
+                display: none;
+            }
+        }
+        .interactive-mobile-img {
+            display: none;
+            @include breakpoint(mobile) {                
+                display: block;
+                width: 300px;
+            }
+        }
+        .text {
+            // width: 600px;
+            background-color: $white;
+            padding: 30px 80px;
+            margin-left: -160px;
+            margin-top: 250px; 
+            color: $black;
+            h2 {
+                font-size: 50px;
+                font-weight: lighter;
+                text-transform: uppercase;
+            }
+            p {
+                font-size: 14px;
+            }
+            @include breakpoint(mobile) {                
+                margin-top: 20px;
+                margin-left: 0;
+                padding: 0;
+                text-align: center;
+                &{
+                    h2 {
+                        font-size: 28px;
+                    }
+                    p {
+                        font-size: 16px;
+                        line-height: 2;
+                    }
+                }
+            }
         }
     }
 }
