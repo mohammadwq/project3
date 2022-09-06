@@ -51,6 +51,16 @@
                     text-transform: uppercase;
                     font-size: 16px;
                     padding: 25px 20px;
+                    position: relative;
+                    &:hover::after {
+                        content: "";
+                        position: absolute;
+                        width: 50%;
+                        height: 3px;
+                        left: 25%;
+                        bottom: 15px;
+                        background-color: $white;
+                    }
                     @include breakpoint(mobile) {
                         font-size: 18px;
                         padding: 10px 20px;
@@ -161,11 +171,10 @@
             display: none;
             @include breakpoint(mobile) {                
                 display: block;
-                width: 300px;
+                width: 320px;
             }
         }
         .text {
-            // width: 600px;
             background-color: $white;
             padding: 30px 80px;
             margin-left: -160px;
@@ -191,6 +200,114 @@
                     p {
                         font-size: 16px;
                         line-height: 2;
+                        text-align:justify;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.our-creation {
+    .container {
+        position: relative;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include breakpoint(mobile) {  
+                margin-top: 10px; 
+                h2 {
+                    position: absolute;
+                    top: -60px;
+                    left: 60px;
+                }
+                .mobile-button {
+                    position: absolute;
+                    bottom: -50px;
+                    left:50%;
+                    transform: translateX(-50%);
+                    border: 1px solid  $black;
+                    padding: 7px 30px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+            h2 {
+                font-size: 28px;
+                text-transform: uppercase;
+                font-family: sans-serif;
+                font-weight: lighter;
+            }
+            button {
+                background-color: $white;
+                color: $black;
+                padding: 5px 30px;
+                text-transform: uppercase;
+                margin-top: 20px;
+                border: 1px solid  $black;
+                cursor: pointer;
+                &:hover {
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+        }
+        .gallery {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
+            gap: 30px;
+            .image {
+                position: relative;
+                max-width: 100%;
+                color: $white;
+                cursor: pointer;
+                img {
+                    width: 100%;
+                }
+                @include breakpoint(mobile) {                
+                    display: none;
+                }
+
+                span {
+                    position: absolute;
+                    left:70px;
+                    bottom: 50px;
+                    font-size: 26px;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                    width: 130px;
+                    z-index: 2;
+                }
+                &:hover::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(238, 238, 238, 0.5);
+                }
+                &:hover {
+                    color: black;
+                }
+            }
+            .image-mobile {
+                display: none;
+                position: relative;
+                @include breakpoint(mobile) {                
+                    display: block;
+                    img {
+                        width: 300px;
+                    }
+                    span {
+                        position: absolute;
+                        top:50px;
+                        left: 20px;
+                        font-size: 20px;
+                        font-weight: lighter;
+                        width: 100px;
                     }
                 }
             }

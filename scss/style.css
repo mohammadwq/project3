@@ -85,6 +85,16 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   padding: 25px 20px;
+  position: relative;
+}
+.header .container nav ul li a:hover::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  left: 25%;
+  bottom: 15px;
+  background-color: hsl(0deg, 0%, 100%);
 }
 @media (max-width: 376px) {
   .header .container nav ul li a {
@@ -210,7 +220,7 @@ body {
 @media (max-width: 376px) {
   .interactive .container .interactive-mobile-img {
     display: block;
-    width: 300px;
+    width: 320px;
   }
 }
 .interactive .container .text {
@@ -241,5 +251,116 @@ body {
   .interactive .container .text p {
     font-size: 16px;
     line-height: 2;
+    text-align: justify;
+  }
+}
+
+.our-creation .container {
+  position: relative;
+}
+.our-creation .container .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 376px) {
+  .our-creation .container .title {
+    margin-top: 10px;
+  }
+  .our-creation .container .title h2 {
+    position: absolute;
+    top: -60px;
+    left: 60px;
+  }
+  .our-creation .container .title .mobile-button {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid hsl(0deg, 0%, 0%);
+    padding: 7px 30px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+.our-creation .container .title h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.our-creation .container .title button {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 0%);
+  padding: 5px 30px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  border: 1px solid hsl(0deg, 0%, 0%);
+  cursor: pointer;
+}
+.our-creation .container .title button:hover {
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+}
+.our-creation .container .gallery {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.our-creation .container .gallery .image {
+  position: relative;
+  max-width: 100%;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+}
+.our-creation .container .gallery .image img {
+  width: 100%;
+}
+@media (max-width: 376px) {
+  .our-creation .container .gallery .image {
+    display: none;
+  }
+}
+.our-creation .container .gallery .image span {
+  position: absolute;
+  left: 70px;
+  bottom: 50px;
+  font-size: 26px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  width: 130px;
+  z-index: 2;
+}
+.our-creation .container .gallery .image:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+.our-creation .container .gallery .image:hover {
+  color: black;
+}
+.our-creation .container .gallery .image-mobile {
+  display: none;
+  position: relative;
+}
+@media (max-width: 376px) {
+  .our-creation .container .gallery .image-mobile {
+    display: block;
+  }
+  .our-creation .container .gallery .image-mobile img {
+    width: 300px;
+  }
+  .our-creation .container .gallery .image-mobile span {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+    width: 100px;
   }
 }/*# sourceMappingURL=style.css.map */
