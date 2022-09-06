@@ -363,4 +363,77 @@ body {
     font-weight: lighter;
     width: 100px;
   }
+}
+
+.footer {
+  margin-top: 100px;
+  background-color: hsl(0deg, 0%, 0%);
+}
+.footer .container {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(0deg, 0%, 100%);
+}
+.footer .container .section1 .title {
+  font-size: 24px;
+}
+.footer .container .section1 .links ul {
+  display: flex;
+  margin-left: -40px;
+}
+.footer .container .section1 .links ul li {
+  margin-right: 20px;
+  position: relative;
+}
+.footer .container .section1 .links ul li:hover::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  left: 25%;
+  bottom: -10px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.footer .container .section2 {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer .container .section2 .icons {
+  cursor: pointer;
+}
+.footer .container .section2 .icons .icon {
+  margin-right: 10px;
+}
+.footer .container .section2 .icons .icon:hover {
+  background-color: hsl(0deg, 0%, 55%);
+}
+.footer .container .section2 .rights {
+  color: hsl(0deg, 0%, 55%);
+}
+@media (max-width: 376px) {
+  .footer .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer .container ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .footer .container ul li {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .footer .container .section2 {
+    margin-top: 30px;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */
