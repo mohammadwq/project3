@@ -385,6 +385,7 @@ body {
   margin-left: -40px;
 }
 .footer .container .section1 .links ul li {
+  text-transform: capitalize;
   margin-right: 20px;
   position: relative;
 }
